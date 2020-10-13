@@ -20,42 +20,39 @@
   </head>
 
   <body>
-    <!-- Шапка сайта -->
-    <header class="header">
-      <div class="container">
-        <nav class="site-nav">
-          <a href="./index.html" lang="en" class="logo">
-            <span class="logo-accent">Web</span>Studio
-          </a>
-          <ul class="list main-nav">
-            <li><a href="./index.html" class="link">Студия</a></li>
-            <li>
-              <a href="./portfolio.html" class="link current">Портфолио</a>
-            </li>
-            <li><a href="" class="link">Контакты</a></li>
-          </ul>
-        </nav>
+<!-- Шапка сайта -->
+<header class="header">
+  <div class="header-container container">
+    <nav class="site-nav">
+      <a href="./index.html" lang="en" class="logo site-nav__logo">
+        <span class="logo-accent">Web</span>Studio
+      </a>
+      <ul class="site-nav__list list">
+        <li class="site-nav__item"><a href="./index.html" class="site-nav__link site-nav__link--current">Студия</a></li>
+        <li class="site-nav__item"><a href="./portfolio.html" class="site-nav__link">Портфолио</a></li>
+        <li class="site-nav__item"><a href="" class="site-nav__link">Контакты</a></li>
+      </ul>
+    </nav>
 
-        <ul class="contacts-top list">
-          <li class="item">
-            <a href="mailto:info@devstudio.com" class="link">
-              <svg width="16" height="16" class="icon-email">
-                <use href="./images/icons.svg#envelope"></use>
-              </svg>
-              info@devstudio.com
-            </a>
-          </li>
-          <li class="item">
-            <a href="tel:+380961111111" class="link">
-              <svg width="16" height="16" class="icon-phone">
-                <use href="./images/icons.svg#phone"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
-      </div>
-    </header>
+    <ul class="header-contacts list">
+      <li class="header-contacts__item">
+        <a href="mailto:info@devstudio.com" class="header-contacts__link">
+          <svg width="16" height="16" class="header-contacts__icon icon-email">
+            <use href="./images/icons.svg#envelope"></use>
+          </svg>
+          info@devstudio.com
+        </a>
+      </li>
+      <li class="header-contacts__item">
+        <a href="tel:+380961111111" class="header-contacts__link">
+          <svg width="16" height="16" class="header-contacts__icon icon-phone">
+            <use href="./images/icons.svg#phone"></use>
+          </svg>
+          +38 096 111 11 11</a>
+      </li>
+    </ul>
+  </div>
+</header>
 
     <!-- Тело main  -->
     <main class="main-body">
@@ -63,23 +60,47 @@
         <h1 class="visually-hidden">Портфолио</h1>
 
         <div class="container">
-          <ul class="filter-list list">
-            <li class="item">
-              <button class="category" type="button">Все</button>
-            </li>
-            <li class="item">
-              <button class="category" type="button">Веб-сайты</button>
-            </li>
-            <li class="item">
-              <button class="category" type="button">Приложения</button>
-            </li>
-            <li class="item">
-              <button class="category" type="button">Дизайн</button>
-            </li>
-            <li>
-              <button class="category" type="button">Маркетинг</button>
-            </li>
-          </ul>
+          <form class="filter-list">
+            <input
+              type="radio"
+              class="filter-list__category visually-hidden"
+              name="category"
+              id="all"
+            />
+            <label class="filter-list__label" for="all">Все</label>
+            <input
+              type="radio"
+              class="filter-list__category visually-hidden"
+              name="category"
+              id="web-sites"
+            />
+            <label class="filter-list__label" for="web-sites">
+              Веб-сайты
+            </label>
+            <input
+              type="radio"
+              class="filter-list__category visually-hidden"
+              name="category"
+              id="app"
+            />
+            <label class="filter-list__label" for="app"> Приложения </label>
+            <input
+              type="radio"
+              class="filter-list__category visually-hidden"
+              name="category"
+              id="design"
+            />
+            <label class="filter-list__label" for="design"> Дизайн </label>
+            <input
+              type="radio"
+              class="filter-list__category visually-hidden"
+              name="category"
+              id="marketing"
+            />
+            <label class="filter-list__label" for="marketing">
+              Маркетинг
+            </label>
+          </form>
         </div>
       </section>
 
@@ -308,78 +329,61 @@
       </section>
     </main>
 
-    <!-- Подвал сайта (Footer) -->
-
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-contacts">
-          <a href="./index.html" lang="en" class="logo">
-            <span class="logo-accent">Web</span>Studio
-          </a>
-          <address class="contacts-bottom">
-            <a
-              href="https://goo.gl/maps/jDe5EnL38nqXM14u8"
-              class="address link"
-              target="_blank"
-            >
-              г. Киев, пр-т Леси Украинки, 26
+      <!-- Подвал сайта (Footer) -->
+      
+      <footer class="footer">
+        <div class="container footer__container">
+          <div class="footer-contacts">
+            <a href="./index.html" lang="en" class="footer-contacts__logo logo">
+              <span class="logo-accent">Web</span>Studio
             </a>
-            <a href="mailto:info@example.com" class="link">
-              info@example.com
-            </a>
-
-            <a href="tel:+380991111111" class="link"> +38 099 111 11 11 </a>
-          </address>
-        </div>
-        <div class="footer-socials">
-          <p class="footer-title">Присойденяйтесь</p>
-          <div class="social-list-footer">
-            <a
-              href="https:/instagram.com"
-              target="_blank"
-              aria-label="Ссылка на Instagram"
-              class="social-icon"
-            >
-              <svg width="20" height="20">
-                <use href="./images/icons.svg#icon-instagram"></use>
-              </svg>
-            </a>
-            <a
-              href="https:/twitter.com"
-              target="_blank"
-              aria-label="Ссылка на Twitter"
-              class="social-icon"
-            >
-              <svg width="20" height="20">
-                <use href="./images/icons.svg#icon-twitter"></use>
-              </svg>
-            </a>
-            <a
-              href="https:/fb.com"
-              target="_blank"
-              aria-label="Ссылка на Facebook"
-              class="social-icon"
-            >
-              <svg width="20" height="20">
-                <use href="./images/icons.svg#icon-facebook"></use>
-              </svg>
-            </a>
-            <a
-              href="https:/linkedin.com"
-              target="_blank"
-              aria-label="Ссылка на Linkedin"
-              class="social-icon"
-            >
-              <svg width="20" height="20">
-                <use href="./images/icons.svg#icon-linkedin"></use>
-              </svg>
-            </a>
+            <address class="footer-contacts__list">
+              <a href="https://goo.gl/maps/jDe5EnL38nqXM14u8" class="footer-contacts__link footer-contacts__link--address"
+                target="_blank">
+                г. Киев, пр-т Леси Украинки, 26
+              </a>
+              <a href="mailto:info@example.com" class="footer-contacts__link">
+                info@example.com
+              </a>
+      
+              <a href="tel:+380991111111" class="footer-contacts__link"> +38 099 111 11 11 </a>
+            </address>
+          </div>
+          <div class="footer-social">
+            <p class="footer__title">Присойденяйтесь</p>
+            <div class="footer-social__list">
+              <a href="https:/instagram.com" target="_blank" aria-label="Ссылка на Instagram" class="footer-social__icon">
+                <svg width="20" height="20">
+                  <use href="./images/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
+              <a href="https:/twitter.com" target="_blank" aria-label="Ссылка на Twitter" class="footer-social__icon">
+                <svg width="20" height="20">
+                  <use href="./images/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
+              <a href="https:/fb.com" target="_blank" aria-label="Ссылка на Facebook" class="footer-social__icon">
+                <svg width="20" height="20">
+                  <use href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+              <a href="https:/linkedin.com" target="_blank" aria-label="Ссылка на Linkedin" class="footer-social__icon">
+                <svg width="20" height="20">
+                  <use href="./images/icons.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="footer-subscribe">
+            <p class="footer__title">Подпишитесь на рассылку</p>
+            <form action="" class="subscribe-form js-form">
+              <input type="email" class="subscribe-email" name="subscribe-email" placeholder="vasya@durak.com"
+                autocomplete="email" />
+              <button type="submit" class="subscribe-submit">Подписаться</button>
+            </form>
           </div>
         </div>
-        <div class="footer-subscribe">
-          <p class="footer-title">Подпишись</p>
-        </div>
-      </div>
-    </footer>
+      </footer>
+
   </body>
 </html>
